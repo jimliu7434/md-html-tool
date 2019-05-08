@@ -1,0 +1,9 @@
+{
+    "mdfiles": [
+        "./example/doc-title.md",
+        "./example/doc-part1.md",
+        "./example/doc-part2.md",
+        "./example/doc-part3.md"
+    ],
+    "target": "./document"
+}

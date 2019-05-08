@@ -1,19 +1,20 @@
 {
   "name": "md-html-tool",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "main": "index.js",
   "repository": "https://github.com/jimliu7434/md-html-tool.git",
   "author": "jimliu <jimliu7434@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "node ./test/test.js"
+    "test": "node ./example/test.js",
+    "testfile": "node ./example/test.settingfile.js"
   },
   "md-html-tool": {
     "mdfiles": [
-      "./test/doc-title.md",
-      "./test/doc-part1.md",
-      "./test/doc-part2.md",
-      "./test/doc-part3.md"
+      "./example/doc-title.md",
+      "./example/doc-part1.md",
+      "./example/doc-part2.md",
+      "./example/doc-part3.md"
     ],
     "target": "./document"
   },

@@ -5,10 +5,10 @@ const mume = require('@shd101wyy/mume');
 const prettyjson = require('prettyjson');
 const colors = require('colors');
 
-module.exports = async function () {
+module.exports = async function (settingfile) {
     console.log(`\n${colors.yellow('Convertion started')}\n`);
 
-    const setting = require('./getconf.js')();
+    const setting = require('./getconf.js')(settingfile);
 
     console.log(colors.white('setting'));
     console.log(colors.white('----'));

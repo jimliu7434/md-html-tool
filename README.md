@@ -20,7 +20,7 @@ or using yarn as a *devDependency*
 
 1. add setting to your package.json
 
-  ![package-setting.png](./readme/package-setting.png)
+  ![package-setting.png](https://raw.githubusercontent.com/jimliu7434/md-html-tool/master/readme/package-setting.png)
 
   ```js
   "md-html-tool": [

@@ -18,7 +18,7 @@ or using yarn as a *devDependency*
 
 ## How to use
 
-1. add setting to your package.json
+* add setting to your package.json
 
   ![package-setting.png](https://raw.githubusercontent.com/jimliu7434/md-html-tool/master/readme/package-setting.png)
 
@@ -32,7 +32,7 @@ or using yarn as a *devDependency*
   ]
   ```
 
-2. write code like this
+* write code like this
 
   ```js
     const mdhtml = require('md-html-tool');
@@ -49,3 +49,15 @@ or using yarn as a *devDependency*
 | :---    | :--- |
 | convert | concat all md files and convert them to one html file |
 | getconf | get all configuration from package.json |
+
+## Add TOC (Table of Content)
+
+Converter will insert *TOC* (Table of Content) at the position that you put **\<!-- toc --> ... \<!-- tocstop -->**
+
+```js
+<!-- toc -->
+toc will be inserted here
+<!-- tocstop -->
+```
+
+if there is no \<!-- toc --> \<!-- tocstop --> , no TOC will be inserted

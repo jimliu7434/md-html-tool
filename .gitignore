@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+
+*.md
+*.html
+!README.md
+!test/*.md
+!example/*.md

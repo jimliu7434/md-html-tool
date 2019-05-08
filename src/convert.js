@@ -3,17 +3,17 @@ const fs = require('fs');
 const toc = require('markdown-toc');
 const mume = require('@shd101wyy/mume');
 const prettyjson = require('prettyjson');
-const colors = require('colors');
+const { red, yellow, green, cyan } = require('colors');
 
 module.exports = async function (settingfile) {
-    console.log(`\n${colors.yellow('Convertion started')}\n`);
+    console.log(`\n${yellow('Convertion started')}\n`);
 
     const setting = require('./getconf.js')(settingfile);
 
-    console.log(colors.white('setting'));
-    console.log(colors.white('----'));
+    console.log(green('setting'));
+    console.log('------');
     console.log(prettyjson.render(setting));
-    console.log(colors.white('----'));
+    console.log('------');
     console.log('');
 
     if (setting.mdfiles.length <= 0) {
@@ -36,11 +36,11 @@ module.exports = async function (settingfile) {
             },
         });
         await engine.htmlExport({ offline: true, runAllCodeChunks: true, });
-        console.log(`file: ${setting.target}.html done`);
-        console.log(`\n${colors.yellow('Convertion completed')}\n`);
+        console.log(`${green('file')} - ${cyan(setting.target)}${cyan('.html')} done`);
+        console.log(`\n${yellow('Convertion completed')}\n`);
     }
     catch (err) {
-        console.error(err.message);
+        console.error(`${red('Error')} ${err.message}`);
     }
     finally {
         return;
